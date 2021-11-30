@@ -25,12 +25,12 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add(
-  "iframe",
-  { prevSubject: "element" },
+  'iframe',
+  { prevSubject: 'element' },
   (iframeArg, callback = () => undefined) =>
     cy
       .wrap(iframeArg)
-      .should((iframe) => expect(iframe.contents().find("body")).to.exist)
-      .then((iframe) => cy.wrap(iframe.contents().find("body")))
+      .should((iframe) => expect(iframe.contents().find('body')).to.exist)
+      .then((iframe) => cy.wrap(iframe.contents().find('body')))
       .within({}, callback)
 );

@@ -1,7 +1,9 @@
 module.exports = {
-  extends: ["@basis-theory", "plugin:cypress/recommended"],
+  extends: ['@basis-theory', 'plugin:cypress/recommended'],
   rules: {
-    // disable/enable any rules
-    "cypress/no-unnecessary-waiting": "off",
+    'cypress/no-unnecessary-waiting': 'off',
+    'new-cap': 'off',
+    camelcase: 'off',
+    'get-off-my-lawn/prefer-arrow-functions': 'off',
   },
 };
