@@ -1,4 +1,8 @@
+import { Chance } from 'chance';
+
 context('bank tokenization', () => {
+  const chance = new Chance();
+
   beforeEach(() => {
     cy.visit('bank');
     cy.wait(1500);
@@ -14,7 +18,14 @@ context('bank tokenization', () => {
       cy.get('input').eq(0).type('222222226');
     });
     cy.get('#account_number>iframe').iframe(() => {
-      cy.get('input').eq(0).type('1234567890');
+      cy.get('input')
+        .eq(0)
+        .type(
+          chance.string({
+            numeric: true,
+            length: 10,
+          })
+        );
     });
 
     cy.get('button').contains('Submit').click();
@@ -22,8 +33,8 @@ context('bank tokenization', () => {
     cy.wait('@tokenize').its('response.statusCode').should('equal', 201);
     cy.wait('@fund').its('response.statusCode').should('equal', 200);
 
-    cy.contains('Created Dwolla funding source successfully.', {
-      timeout: 15000,
-    }).should('be.visible');
+    cy.contains('Created Dwolla funding source successfully.').should(
+      'be.visible'
+    );
   });
 });
