@@ -4,11 +4,11 @@
   "description": "Basis Theory Vanilla JS examples",
   "main": "index.js",
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome"
   },
