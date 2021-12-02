@@ -60,10 +60,12 @@ function enableCard() {
 }
 
 function displaySuccess() {
+  document.querySelector('#error').style.display = 'none';
   document.querySelector('#success').style.display = 'flex';
 }
 
 function displayError() {
+  document.querySelector('#error').style.display = 'none';
   document.querySelector('#error').style.display = 'flex';
 }
 

@@ -30,14 +30,6 @@ const options = {
   },
 };
 
-window.addEventListener('message', ({ data }) => {
-  const d = JSON.parse(data);
-
-  if (d.targetId === 'routingNumber') {
-    console.info(d);
-  }
-});
-
 window.addEventListener('load', async () => {
   await BasisTheory.init(ELEMENTS_KEY, {
     elements: true,
@@ -47,6 +39,7 @@ window.addEventListener('load', async () => {
     ...options,
     targetId: 'routingNumber',
     placeholder: 'Routing Number',
+    'aria-label': 'Routing Number',
     mask: [
       /\d/u,
       /\d/u,
@@ -60,45 +53,48 @@ window.addEventListener('load', async () => {
       ' ',
       /\d/u,
     ],
-    transform: /\s/u,
+    transform: /\s/u, // strip out spaces from mask above
   });
   accountNumber = BasisTheory.elements.create('text', {
     ...options,
     targetId: 'accountNumber',
     placeholder: 'Account Number',
+    'aria-label': 'Account Number',
   });
 
   await routingNumber.mount('#routing_number');
   await accountNumber.mount('#account_number');
-
-  routingNumber.on('change', (e) => {
-    console.log(e);
-  });
 });
-//
-// function disableCard() {
-//   card.update({
-//     disabled: true,
-//   });
-// }
-//
-// function enableCard() {
-//   card.update({
-//     disabled: false,
-//   });
-// }
+
+function disableBank() {
+  [routingNumber, accountNumber].forEach((element) =>
+    element.update({
+      disabled: true,
+    })
+  );
+}
+
+function enableBank() {
+  [routingNumber, accountNumber].forEach((element) =>
+    element.update({
+      disabled: false,
+    })
+  );
+}
 
 function displaySuccess() {
+  document.querySelector('#error').style.display = 'none';
   document.querySelector('#success').style.display = 'flex';
 }
 
 function displayError() {
+  document.querySelector('#error').style.display = 'none';
   document.querySelector('#error').style.display = 'flex';
 }
 
 // eslint-disable-next-line no-unused-vars
 async function submitBank() {
-  // disableCard();
+  disableBank();
 
   const token = await BasisTheory.elements.atomicBank.create({
     bank: {
@@ -107,28 +103,24 @@ async function submitBank() {
     },
   });
 
-  console.log(token);
+  const response = await fetch(`/api/bank/fund`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      bank_token_id: token.id,
+    }),
+  });
 
-  displaySuccess();
-  //
-  // const response = await fetch(`/api/card/charge`, {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     Accept: 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     card_token_id: token.id,
-  //   }),
-  // });
+  const success = (await response.json()).success;
 
-  // const success = (await response.json()).success;
+  if (success) {
+    displaySuccess();
+  } else {
+    displayError();
+  }
 
-  // if (success) {
-  //   displaySuccess();
-  // } else {
-  //   displayError();
-  // }
-  //
-  // enableCard();
+  enableBank();
 }
