@@ -1,0 +1,28 @@
+{
+  "name": "basis-theory-js-examples",
+  "version": "1.0.0",
+  "description": "Basis Theory Vanilla JS examples",
+  "main": "index.js",
+  "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --quiet --ignore-path .gitignore",
+    "start": "node index.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --headless -b chrome"
+  },
+  "dependencies": {
+    "@basis-theory/basis-theory-js": "^1.13.0",
+    "express": "^4.17.1",
+    "stripe": "^8.191.0"
+  },
+  "devDependencies": {
+    "@basis-theory/eslint-config": "^1.0.6",
+    "cypress": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.5.0"
+  },
+  "prettier": "@basis-theory/eslint-config/prettier"
+}
