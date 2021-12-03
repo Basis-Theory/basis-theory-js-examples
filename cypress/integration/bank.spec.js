@@ -14,8 +14,10 @@ context('bank tokenization', () => {
     );
     cy.intercept('POST', '/api/bank/fund').as('fund');
 
+    cy.get('#name').type('Jane Doe');
+
     cy.get('#routing_number>iframe').iframe(() => {
-      cy.get('input').eq(0).type('222222226');
+      cy.get('input').eq(0).type('021000021');
     });
     cy.get('#account_number>iframe').iframe(() => {
       cy.get('input')
@@ -31,10 +33,11 @@ context('bank tokenization', () => {
     cy.get('button').contains('Submit').click();
 
     cy.wait('@tokenize').its('response.statusCode').should('equal', 201);
-    cy.wait('@fund').its('response.statusCode').should('equal', 200);
-
-    cy.contains('Created Dwolla funding source successfully.').should(
-      'be.visible'
-    );
+    cy.wait('@fund').then(({ response: { statusCode, body } }) => {
+      expect(statusCode).to.equal(200);
+      cy.contains(
+        `Created Spreedly Payment Method successfully: ${body.payment_method_token}`
+      ).should('be.visible');
+    });
   });
 });

@@ -82,9 +82,12 @@ function enableBank() {
   );
 }
 
-function displaySuccess() {
+function displaySuccess(paymentMethodToken) {
   document.querySelector('#error').style.display = 'none';
-  document.querySelector('#success').style.display = 'flex';
+  const success = document.querySelector('#success');
+
+  success.style.display = 'flex';
+  success.innerHTML = `Created Spreedly Payment Method successfully: ${paymentMethodToken}`;
 }
 
 function displayError() {
@@ -111,13 +114,14 @@ async function submitBank() {
     },
     body: JSON.stringify({
       bank_token_id: token.id,
+      name: document.querySelector('#name').value,
     }),
   });
 
-  const success = (await response.json()).success;
+  const { success, payment_method_token } = await response.json();
 
   if (success) {
-    displaySuccess();
+    displaySuccess(payment_method_token);
   } else {
     displayError();
   }
