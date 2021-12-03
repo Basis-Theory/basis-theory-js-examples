@@ -21,11 +21,7 @@ const executeSpreedlyReactor = async ({ bankTokenId, name }) => {
 };
 
 router.post('/fund', async (req, res) => {
-  const {
-    bank_token_id: bankTokenId,
-
-    name,
-  } = req.body;
+  const { bank_token_id: bankTokenId, name } = req.body;
 
   try {
     const {
