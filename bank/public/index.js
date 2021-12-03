@@ -99,30 +99,34 @@ function displayError() {
 async function submitBank() {
   disableBank();
 
-  const token = await BasisTheory.elements.atomicBank.create({
-    bank: {
-      routingNumber,
-      accountNumber,
-    },
-  });
+  try {
+    const token = await BasisTheory.elements.atomicBank.create({
+      bank: {
+        routingNumber,
+        accountNumber,
+      },
+    });
 
-  const response = await fetch(`/api/bank/fund`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      bank_token_id: token.id,
-      name: document.querySelector('#name').value,
-    }),
-  });
+    const response = await fetch(`/api/bank/fund`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        bank_token_id: token.id,
+        name: document.querySelector('#name').value,
+      }),
+    });
 
-  const { success, payment_method_token } = await response.json();
+    const { success, payment_method_token } = await response.json();
 
-  if (success) {
-    displaySuccess(payment_method_token);
-  } else {
+    if (success) {
+      displaySuccess(payment_method_token);
+    }
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
     displayError();
   }
 
