@@ -91,7 +91,7 @@ function displaySuccess(paymentMethodToken) {
 }
 
 function displayError() {
-  document.querySelector('#error').style.display = 'none';
+  document.querySelector('#success').style.display = 'none';
   document.querySelector('#error').style.display = 'flex';
 }
 
