@@ -60,10 +60,12 @@ function enableCard() {
 }
 
 function displaySuccess() {
+  document.querySelector('#error').style.display = 'none';
   document.querySelector('#success').style.display = 'flex';
 }
 
 function displayError() {
+  document.querySelector('#success').style.display = 'none';
   document.querySelector('#error').style.display = 'flex';
 }
 
@@ -71,26 +73,30 @@ function displayError() {
 async function submitCard() {
   disableCard();
 
-  const token = await BasisTheory.elements.storeCreditCard({
-    card,
-  });
+  try {
+    const token = await BasisTheory.elements.storeCreditCard({
+      card,
+    });
 
-  const response = await fetch(`/api/card/charge`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      card_token_id: token.id,
-    }),
-  });
+    const response = await fetch(`/api/card/charge`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        card_token_id: token.id,
+      }),
+    });
 
-  const success = (await response.json()).success;
+    const success = (await response.json()).success;
 
-  if (success) {
-    displaySuccess();
-  } else {
+    if (success) {
+      displaySuccess();
+    }
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
     displayError();
   }
 

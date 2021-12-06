@@ -36,9 +36,7 @@ context('card tokenization', () => {
       cy.wait('@tokenize').its('response.statusCode').should('equal', 201);
       cy.wait('@charge').its('response.statusCode').should('equal', 200);
 
-      cy.contains('Test card charged $10.99 with Stripe.', {
-        timeout: 15000,
-      }).should('be.visible');
+      cy.contains('Test card charged $10.99 with Stripe.').should('be.visible');
     })
   );
 });
