@@ -2,6 +2,11 @@ name: Verify
 
 on:
   workflow_dispatch:
+    inputs:
+      source:
+        type: string
+        description: Which repo triggered this workflow run
+        required: true
 
   pull_request:
     branches: [ master ]
