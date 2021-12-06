@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Cypress run triggered by {{ github.event.inputs.source }}
+      - name: Cypress run triggered by ${{ github.event.inputs.source }}
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
