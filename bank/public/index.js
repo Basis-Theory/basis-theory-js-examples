@@ -35,7 +35,7 @@ window.addEventListener('load', async () => {
     elements: true,
   });
 
-  routingNumber = BasisTheory.elements.create('text', {
+  routingNumber = BasisTheory.createElement('text', {
     ...options,
     targetId: 'routingNumber',
     placeholder: 'Routing Number',
@@ -55,7 +55,7 @@ window.addEventListener('load', async () => {
     ],
     transform: /\s/u, // strip out spaces from mask above
   });
-  accountNumber = BasisTheory.elements.create('text', {
+  accountNumber = BasisTheory.createElement('text', {
     ...options,
     targetId: 'accountNumber',
     placeholder: 'Account Number',
@@ -100,7 +100,7 @@ async function submitBank() {
   disableBank();
 
   try {
-    const token = await BasisTheory.elements.atomicBank.create({
+    const token = await BasisTheory.atomicBanks.create({
       bank: {
         routingNumber,
         accountNumber,
