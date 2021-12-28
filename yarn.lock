@@ -365,11 +365,19 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@basis-theory/basis-theory-js@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.13.0.tgz#692c0b078a2431ff9cbe7636baca257b290a91f6"
-  integrity sha512-XhCyoOKZy0t0KybRkLdKXCSrkOOdJ8fiXElvxleS+GgIJqGLTk0dR7L4ovyKAHrFwA9AF93do0j0Aqu5cSpmhQ==
+"@basis-theory/basis-theory-elements-interfaces@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-2.0.1.tgz#f62662f727f894f4aa687261d53fae90344681f6"
+  integrity sha512-lLitIwJEnLsm2t41fJCR2JWGokrreM8zheSq14LvUGE48isXNDwvLtO/AFOELha+7Cj3LcVPbZKAlFWmasZrtQ==
   dependencies:
+    csstype "^3.0.8"
+
+"@basis-theory/basis-theory-js@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.14.0.tgz#4e714965f1e58cdaf39c7b41cdffaddac3d2019e"
+  integrity sha512-ZYmbDMfYdrk/bPl2v3Sq8r3xSKIm2Bi1jW/9CPiD/BD66ZUj8g1XUa1ygp06KvuMWoTEhk7H5QNEMcQmAz4Iuw==
+  dependencies:
+    "@basis-theory/basis-theory-elements-interfaces" "^2.0.1"
     axios "^0.21.2"
     camelcase-keys "^6.2.2"
     snake-case "^3.0.4"
@@ -1263,6 +1271,11 @@ crypto-random-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
+
+csstype@^3.0.8:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
+  integrity sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==
 
 cypress@^9.1.0:
   version "9.1.0"

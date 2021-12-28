@@ -36,7 +36,7 @@ window.addEventListener('load', async () => {
     elements: true,
   });
 
-  card = BasisTheory.elements.create('card', options);
+  card = BasisTheory.createElement('card', options);
 
   await card.mount('#card');
 
@@ -74,7 +74,7 @@ async function submitCard() {
   disableCard();
 
   try {
-    const token = await BasisTheory.elements.storeCreditCard({
+    const token = await BasisTheory.atomicCards.create({
       card,
     });
 
