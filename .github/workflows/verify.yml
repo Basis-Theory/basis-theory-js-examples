@@ -24,13 +24,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Cypress run ${{ matrix.example }} triggered by ${{ github.event.inputs.source || github.event_name }}
+      - name: Cypress run triggered by ${{ github.event.inputs.source || github.event_name }}
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
           headless: true
           install-command: yarn --frozen-lockfile --silent
-          start: yarn start
+          start: yarn start:${{ matrix.example }}
           record: true
           spec: cypress/integration/${{ matrix.example }}/**/*
 

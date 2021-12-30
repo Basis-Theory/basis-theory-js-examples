@@ -9,7 +9,7 @@
   "workspaces": ["collect-atomic-cards-with-elements"],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
-    "start": "nodemon index.js",
+    "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
     "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\""
