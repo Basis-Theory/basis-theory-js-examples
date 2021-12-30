@@ -78,7 +78,7 @@ async function submitCard() {
       card,
     });
 
-    const response = await fetch(`/api/card/charge`, {
+    const response = await fetch(`/api/charge`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

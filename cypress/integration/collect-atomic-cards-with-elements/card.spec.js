@@ -15,7 +15,7 @@ const amex = {
 
 context('card tokenization', () => {
   beforeEach(() => {
-    cy.visit('card');
+    cy.visit('/');
     cy.wait(1500);
   });
 
@@ -24,7 +24,7 @@ context('card tokenization', () => {
       cy.intercept('POST', 'https://api.basistheory.com/atomic/cards').as(
         'tokenize'
       );
-      cy.intercept('POST', '/api/card/charge').as('charge');
+      cy.intercept('POST', '/api/charge').as('charge');
 
       cy.get('iframe').iframe(() => {
         // types everything, testing the "focus next input" feature

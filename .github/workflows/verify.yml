@@ -13,18 +13,18 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 'lts/*' ]
-        os: [ ubuntu-latest ]
+        example:
+          - collect-atomic-cards-with-elements
     env:
       HUSKY: 0 # disables husky hooks
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Cypress run triggered by ${{ github.event.inputs.source || github.event_name }}
+      - name: Cypress run ${{ matrix.example }} triggered by ${{ github.event.inputs.source || github.event_name }}
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
@@ -32,6 +32,8 @@ jobs:
           install-command: yarn --frozen-lockfile --silent
           start: yarn start
           record: true
+          spec: cypress/integration/${{ matrix.example }}/**/*
+
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
