@@ -6,13 +6,15 @@
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",
   "private": true,
-  "workspaces": ["collect-atomic-cards-with-elements"],
+  "workspaces": ["collect-atomic-cards-with-elements", "collect-atomic-banks-with-elements"],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
     "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
+    "start:collect-atomic-banks-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
-    "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\""
+    "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\"",
+    "cypress:run:collect-atomic-banks-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-banks-with-elements/**/*\""
   },
   "dependencies": {
     "@basis-theory/basis-theory-js": "^1.14.0",

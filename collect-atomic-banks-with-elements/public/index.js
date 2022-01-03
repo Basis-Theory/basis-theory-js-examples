@@ -107,7 +107,7 @@ async function submitBank() {
       },
     });
 
-    const response = await fetch(`/api/bank/fund`, {
+    const response = await fetch(`/api/fund`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

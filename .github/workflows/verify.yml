@@ -18,6 +18,7 @@ jobs:
       matrix:
         example:
           - collect-atomic-cards-with-elements
+          - collect-atomic-banks-with-elements
     env:
       HUSKY: 0 # disables husky hooks
     steps:

@@ -4,7 +4,7 @@ context('bank tokenization', () => {
   const chance = new Chance();
 
   beforeEach(() => {
-    cy.visit('bank');
+    cy.visit('/');
     cy.wait(1500);
   });
 
@@ -12,7 +12,7 @@ context('bank tokenization', () => {
     cy.intercept('POST', 'https://api.basistheory.com/atomic/banks').as(
       'tokenize'
     );
-    cy.intercept('POST', '/api/bank/fund').as('fund');
+    cy.intercept('POST', '/api/fund').as('fund');
 
     cy.get('#name').type('Jane Doe');
 
