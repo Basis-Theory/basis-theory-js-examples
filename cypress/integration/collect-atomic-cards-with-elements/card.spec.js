@@ -1,6 +1,7 @@
-const expirationDate = `${new Date().getMonth() + 1}${String(
-  new Date().getFullYear() + 1
-).slice(-2)}`;
+const expirationDate = `${String(new Date().getMonth() + 1).padStart(
+  2,
+  '0'
+)}${String(new Date().getFullYear() + 1).slice(-2)}`;
 
 const visa = {
   brand: 'visa',
