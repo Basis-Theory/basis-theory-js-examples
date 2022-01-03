@@ -1,6 +1,7 @@
-const expirationDate = `${new Date().getMonth() + 1}${String(
-  new Date().getFullYear() + 1
-).slice(-2)}`;
+const expirationDate = `${String(new Date().getMonth() + 1).padStart(
+  2,
+  '0'
+)}${String(new Date().getFullYear() + 1).slice(-2)}`;
 
 const visa = {
   brand: 'visa',
@@ -15,7 +16,7 @@ const amex = {
 
 context('card tokenization', () => {
   beforeEach(() => {
-    cy.visit('card');
+    cy.visit('/');
     cy.wait(1500);
   });
 
@@ -24,7 +25,7 @@ context('card tokenization', () => {
       cy.intercept('POST', 'https://api.basistheory.com/atomic/cards').as(
         'tokenize'
       );
-      cy.intercept('POST', '/api/card/charge').as('charge');
+      cy.intercept('POST', '/api/charge').as('charge');
 
       cy.get('iframe').iframe(() => {
         // types everything, testing the "focus next input" feature
