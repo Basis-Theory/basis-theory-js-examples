@@ -6,21 +6,17 @@
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",
   "private": true,
-  "workspaces": ["collect-atomic-cards-with-elements", "collect-atomic-banks-with-elements"],
+  "workspaces": ["collect-atomic-cards-with-elements", "collect-atomic-banks-with-elements", "store-atomic-banks"],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
     "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
     "start:collect-atomic-banks-with-elements": "yarn workspace collect-atomic-banks-with-elements start",
+    "start:store-atomic-banks": "yarn workspace store-atomic-banks start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
     "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\"",
-    "cypress:run:collect-atomic-banks-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-banks-with-elements/**/*\""
-  },
-  "dependencies": {
-    "@basis-theory/basis-theory-js": "^1.14.0",
-    "express": "^4.17.2",
-    "nodemon": "^2.0.15",
-    "stripe": "^8.195.0"
+    "cypress:run:collect-atomic-banks-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-banks-with-elements/**/*\"",
+    "cypress:run:store-atomic-banks": "yarn cypress:run --spec \"cypress/integration/store-atomic-banks/**/*\""
   },
   "devDependencies": {
     "@basis-theory/eslint-config": "^1.0.6",

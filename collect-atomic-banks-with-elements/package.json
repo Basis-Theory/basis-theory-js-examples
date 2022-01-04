@@ -7,9 +7,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "start": "nodemon index.js",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headless -b chrome"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "@basis-theory/basis-theory-js": "^1.14.0",
