@@ -19,6 +19,7 @@ jobs:
         example:
           - collect-atomic-cards-with-elements
           - collect-atomic-banks-with-elements
+          - store-atomic-banks
     env:
       HUSKY: 0 # disables husky hooks
     steps:
