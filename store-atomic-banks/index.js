@@ -19,7 +19,7 @@ app.get('/get', async (req, res) => {
     return res.status(404).send();
   }
 
-  const atomicBank = await basisTheory.atomicBanks.retrieveDecrypted(
+  const atomicBank = await basisTheory.atomicBanks.retrieve(
     account.id
   );
 
