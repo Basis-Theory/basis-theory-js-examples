@@ -5,6 +5,9 @@ const ELEMENTS_KEY = 'key_XVB48UzHJ57TdPtmLhJa9e';
 let routingNumber;
 let accountNumber;
 
+let routingNumberComplete = false;
+let accountNumberNotEmpty = false;
+
 const options = {
   style: {
     fonts: [
@@ -64,6 +67,24 @@ window.addEventListener('load', async () => {
 
   await routingNumber.mount('#routing_number');
   await accountNumber.mount('#account_number');
+
+  const submitBtn = document.querySelector('#submit_button');
+
+  // check if routing number is complete (mask filled)
+  routingNumber.on('change', (event) => {
+    routingNumberComplete = event.complete;
+
+    // update if btn is disabled
+    submitBtn.disabled = !(routingNumberComplete && accountNumberNotEmpty);
+  });
+
+  // check if account number is not empty
+  accountNumber.on('change', (event) => {
+    accountNumberNotEmpty = !event.empty;
+
+    // update if btn is disabled
+    submitBtn.disabled = !(routingNumberComplete && accountNumberNotEmpty);
+  });
 });
 
 function disableBank() {
