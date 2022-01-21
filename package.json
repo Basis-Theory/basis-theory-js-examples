@@ -6,7 +6,12 @@
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",
   "private": true,
-  "workspaces": ["collect-atomic-cards-with-elements", "collect-atomic-banks-with-elements", "store-atomic-banks"],
+  "workspaces": [
+    "collect-atomic-cards-with-elements",
+    "collect-atomic-banks-with-elements",
+    "store-atomic-banks",
+    "collect-atomic-cards-with-elements-react"
+  ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
     "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
