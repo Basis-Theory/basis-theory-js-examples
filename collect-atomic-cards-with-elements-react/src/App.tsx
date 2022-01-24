@@ -6,7 +6,7 @@ import {
 import './App.css';
 import { CheckoutForm } from './CheckoutForm';
 
-function App() {
+function App(): JSX.Element {
   const { bt } = useBasisTheory('key_XVB48UzHJ57TdPtmLhJa9e', {
     elements: true,
   });

@@ -15,7 +15,7 @@ body * {
   align-items: center;
   justify-content: center;
   width: 95%;
-  max-width: 440px;
+  /*max-width: 440px;*/
   height: 100vh;
 }
 
@@ -33,10 +33,16 @@ body * {
   padding: 11px 15px;
 }
 
+#error.visible {
+  display: initial;
+}
+
 #form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 424px;
+  margin: 0 32px;
 }
 
 .code {
@@ -54,6 +60,23 @@ body * {
   font-family: "Source Code Pro";
   font-size: 14px;
   will-change: width;
+}
+
+
+#token {
+  width: 0%;
+  min-width: 0px;
+  overflow: hidden;
+  color: #fff;
+  transition: width 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Source Code Pro";
+  font-size: 14px;
+  will-change: width;
+  max-width: 480px;
+}
+
+#token.expanded {
+  width: 100%;
 }
 
 .row {
@@ -116,4 +139,5 @@ input::placeholder {
 #submit_button:disabled {
   background-color: #009fa9;
   color: #2d303e;
+  cursor: not-allowed;
 }

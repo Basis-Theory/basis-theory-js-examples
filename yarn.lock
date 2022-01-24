@@ -508,10 +508,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@7.13.10":
-  version "7.13.10"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.13.10.tgz#8f8f9bf7b3afa3eabd061f7a5bcdf4fec3c48409"
-  integrity sha512-0s7Mlrw9uTWkYua7xWr99Wpk2bnGa0ANleKfksYAES8LpWH4gW1OUr42vqKNf0us5UQNfru2wPqMqRITzq/SIQ==
+"@babel/parser@7.14.6":
+  version "7.14.6"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.14.6.tgz#d85cc68ca3cac84eae384c06f032921f5227f4b2"
+  integrity sha512-oG0ej7efjEXxb4UgE+klVx+3j4MVo+A2vCzm7OUN4CLo6WhQ+vSOD2yJ8m7B+DghObxtLxt3EfgMWpq+AsWehQ==
 
 "@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.16.10", "@babel/parser@^7.16.7":
   version "7.16.10"
@@ -1451,13 +1451,13 @@
   dependencies:
     "@basis-theory/basis-theory-js" "^1.20.0"
 
-"@basis-theory/eslint-config@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@basis-theory/eslint-config/-/eslint-config-1.0.6.tgz#8bccb773ea84c71c807a28ac903417621eb3ec3b"
-  integrity sha512-btx0ugDZ+8FZPg4IgmLMTF9q8Iy8SLR0yIEBEt9nmvvS2SOV7SezWKeIcQEORQMAb8lQM82KFp3kMO3tF7+GDA==
+"@basis-theory/eslint-config@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@basis-theory/eslint-config/-/eslint-config-1.0.8.tgz#5e53936cc3b900a74e9c3c33f5fc85d571437a25"
+  integrity sha512-Qi7RVCbT/jUT1wIzcLt3tqBSVTEnFCJCbWqo41z1EFBm6HQFpDFexN509I5+7ttZlgGfn8LRxJBV8nKJRVG+NQ==
   dependencies:
-    "@rushstack/eslint-patch" "^1.0.6"
-    "@trivago/prettier-plugin-sort-imports" "^2.0.4"
+    "@rushstack/eslint-patch" "^1.0.8"
+    "@trivago/prettier-plugin-sort-imports" "^3.1.1"
     "@typescript-eslint/eslint-plugin" "^4.30.0"
     "@typescript-eslint/parser" "^4.30.0"
     dot-prop "^6.0.1"
@@ -1465,7 +1465,7 @@
     eslint-config-next "^11.1.2"
     eslint-config-prettier "^8.3.0"
     eslint-plugin-prettier "^4.0.0"
-    read-pkg-up "7.0.1"
+    read-pkg-up "^7.0.1"
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -1832,7 +1832,7 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
   integrity sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==
 
-"@rushstack/eslint-patch@^1.0.6", "@rushstack/eslint-patch@^1.1.0":
+"@rushstack/eslint-patch@^1.0.6", "@rushstack/eslint-patch@^1.0.8", "@rushstack/eslint-patch@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
@@ -2025,17 +2025,16 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
-"@trivago/prettier-plugin-sort-imports@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@trivago/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-2.0.4.tgz#2e5bbf80bd87e919202f791008a2fbcdbb2a566f"
-  integrity sha512-SCVUhQdbjn/Z4AY7b9JO00fZCeXxiVuarVxYP0n6cX2ijiQkE5HmGrOk32n0u385OebzQ9bZcrc51lAGLjXnFQ==
+"@trivago/prettier-plugin-sort-imports@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@trivago/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-3.1.1.tgz#101e34eadb252572ec32aea6d5487d93b90a0037"
+  integrity sha512-T9EJNEOugWts4WxdmpWeY+sp+2fUHhvGh9QSBCowEGJfcbnu355HQRqok5bKwejdieMaI1+uGZhuTNMZwjqOCQ==
   dependencies:
     "@babel/core" "7.13.10"
     "@babel/generator" "7.13.9"
-    "@babel/parser" "7.13.10"
+    "@babel/parser" "7.14.6"
     "@babel/traverse" "7.13.0"
     "@babel/types" "7.13.0"
-    "@types/lodash" "4.14.168"
     javascript-natural-sort "0.7.1"
     lodash "4.17.21"
 
@@ -2225,11 +2224,6 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
-
-"@types/lodash@4.14.168":
-  version "4.14.168"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.168.tgz#fe24632e79b7ade3f132891afff86caa5e5ce008"
-  integrity sha512-oVfRvqHV/V6D1yifJbVRU3TMp8OT6o6BG+U9MkwuJ3U8/CsDHvalRpsxBqivn71ztOFZBTfJMvETbqHiaNSj7Q==
 
 "@types/mime@^1":
   version "1.3.2"
