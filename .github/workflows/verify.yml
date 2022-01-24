@@ -18,6 +18,7 @@ jobs:
       matrix:
         example:
           - collect-atomic-cards-with-elements
+          - collect-atomic-cards-with-elements-react
           - collect-atomic-banks-with-elements
           - store-atomic-banks
     env:
