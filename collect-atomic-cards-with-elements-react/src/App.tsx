@@ -6,8 +6,10 @@ import {
 import './App.css';
 import { CheckoutForm } from './CheckoutForm';
 
+const ELEMENTS_API_KEY = 'key_XVB48UzHJ57TdPtmLhJa9e';
+
 function App(): JSX.Element {
-  const { bt } = useBasisTheory('key_XVB48UzHJ57TdPtmLhJa9e', {
+  const { bt } = useBasisTheory(ELEMENTS_API_KEY, {
     elements: true,
   });
 

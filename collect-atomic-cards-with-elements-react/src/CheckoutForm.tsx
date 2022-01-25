@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { CardElement, useBasisTheory } from '@basis-theory/basis-theory-react';
 
 export const CheckoutForm = (): JSX.Element => {

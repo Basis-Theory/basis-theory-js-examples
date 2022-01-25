@@ -1446,8 +1446,10 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-react@file:../basis-theory-react/dist":
-  version "1.0.0-alpha.8"
+"@basis-theory/basis-theory-react@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.0.2.tgz#04074d488b36a6ef5a5a77a313e4bbd2885b37a3"
+  integrity sha512-Yfv74rYNiH6MWYALWAQ1Q2GuAf95GaMzl+g6rxcUTe82yXJieMWdXiac5ZIXY91blN9wBmFyf9cq0dlnBPWP6g==
   dependencies:
     "@basis-theory/basis-theory-js" "^1.20.0"
 
