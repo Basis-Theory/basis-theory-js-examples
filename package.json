@@ -15,6 +15,7 @@
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
     "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
+    "start:collect-atomic-cards-with-elements-react": "yarn workspace collect-atomic-cards-with-elements-react start",
     "start:collect-atomic-banks-with-elements": "yarn workspace collect-atomic-banks-with-elements start",
     "start:store-atomic-banks": "yarn workspace store-atomic-banks start",
     "cypress:open": "cypress open",
