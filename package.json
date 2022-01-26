@@ -10,7 +10,8 @@
     "collect-atomic-cards-with-elements",
     "collect-atomic-banks-with-elements",
     "store-atomic-banks",
-    "collect-atomic-cards-with-elements-react"
+    "collect-atomic-cards-with-elements-react",
+    "collect-pii-with-elements-react"
   ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
@@ -18,6 +19,7 @@
     "start:collect-atomic-cards-with-elements-react": "yarn workspace collect-atomic-cards-with-elements-react start",
     "start:collect-atomic-banks-with-elements": "yarn workspace collect-atomic-banks-with-elements start",
     "start:store-atomic-banks": "yarn workspace store-atomic-banks start",
+    "start:collect-pii-with-elements-react": "yarn workspace collect-pii-with-elements-react start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
     "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\"",

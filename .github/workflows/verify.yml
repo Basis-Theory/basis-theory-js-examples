@@ -21,6 +21,7 @@ jobs:
           - collect-atomic-cards-with-elements-react
           - collect-atomic-banks-with-elements
           - store-atomic-banks
+          - collect-pii-with-elements-react
     env:
       HUSKY: 0 # disables husky hooks
     steps:
