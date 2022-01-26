@@ -82,10 +82,12 @@ export const CheckoutForm = (): JSX.Element => {
         >
           Submit
         </button>
+        <div className="row">
+          <pre id="token" className={token && 'expanded'}>
+            {token}
+          </pre>
+        </div>
       </div>
-      <pre id="token" className={token && 'expanded'}>
-        {token}
-      </pre>
     </>
   );
 };
