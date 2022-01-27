@@ -53,7 +53,10 @@ export const RegistrationForm = (): JSX.Element => {
       try {
         const response = await bt.tokenize({
           fullName: bt.getElement('fullName'),
-          ssn: bt.getElement('ssn'),
+          ssn: {
+            type: 'social_security_number',
+            data: bt.getElement('ssn'),
+          },
         });
 
         setToken(JSON.stringify(response, undefined, 2));
@@ -80,6 +83,7 @@ export const RegistrationForm = (): JSX.Element => {
           <TextElement
             id="fullName"
             placeholder="Jane Doe"
+            aria-label="Full Name"
             disabled={isBusy}
             style={inputStyle}
             onChange={({ empty }) => {
@@ -92,12 +96,14 @@ export const RegistrationForm = (): JSX.Element => {
           <TextElement
             id="ssn"
             placeholder="123-45-6789"
+            aria-label="Social Security Number"
             mask={ssnMask}
             disabled={isBusy}
             style={inputStyle}
             onChange={({ complete }) => {
               setSsnComplete(complete);
             }}
+            transform={/[-]/u}
           />
         </div>
         <button

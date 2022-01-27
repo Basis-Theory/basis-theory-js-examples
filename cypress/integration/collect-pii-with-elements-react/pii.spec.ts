@@ -23,8 +23,8 @@ context('pii tokenization', () => {
     cy.wait('@tokenize').its('response.statusCode').should('equal', 200);
 
     // checks created tokens
-    cy.contains(/"fullName":\s".+?"/u)
-      .contains(/"ssn":\s".+?"/u)
+    cy.contains(/"fullName":\s".+?"/u) // simple token id for the fullName
+      .contains(/"ssn":\s\{/u) // `ssn
       .should('be.visible');
   });
 });
