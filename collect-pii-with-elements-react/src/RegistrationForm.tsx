@@ -41,7 +41,7 @@ export const RegistrationForm = (): JSX.Element => {
   const [nameEmpty, setNameEmpty] = useState(true);
   const [ssnComplete, setSsnComplete] = useState(false);
   const [isBusy, setIsBusy] = useState(false);
-  const [token, setToken] = useState('');
+  const [tokens, setTokens] = useState('');
   const [isError, setIsError] = useState(false);
   const { bt } = useBasisTheory();
 
@@ -59,7 +59,7 @@ export const RegistrationForm = (): JSX.Element => {
           },
         });
 
-        setToken(JSON.stringify(response, undefined, 2));
+        setTokens(JSON.stringify(response, undefined, 2));
       } catch (error) {
         setIsError(true);
         // eslint-disable-next-line no-console
@@ -115,8 +115,8 @@ export const RegistrationForm = (): JSX.Element => {
           Submit
         </button>
         <div className="row">
-          <pre id="token" className={token && 'expanded'}>
-            {token}
+          <pre id="token" className={tokens && 'expanded'}>
+            {tokens}
           </pre>
         </div>
       </div>
