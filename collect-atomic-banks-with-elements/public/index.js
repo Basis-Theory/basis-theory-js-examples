@@ -116,7 +116,7 @@ function displayError() {
   document.querySelector('#error').style.display = 'flex';
 }
 
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function submitBank() {
   disableBank();
 

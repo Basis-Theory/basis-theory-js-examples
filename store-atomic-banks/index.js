@@ -19,11 +19,9 @@ app.get('/get', async (req, res) => {
     return res.status(404).send();
   }
 
-  const atomicBank = await basisTheory.atomicBanks.retrieve(
-    account.id
-  );
+  const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
 
-  res.send(atomicBank.bank);
+  return res.send(atomicBank.bank);
 });
 
 app.post('/create', async (req, res) => {
