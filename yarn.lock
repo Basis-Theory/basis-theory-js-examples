@@ -1410,13 +1410,6 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@basis-theory/basis-theory-elements-interfaces@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-2.0.1.tgz#f62662f727f894f4aa687261d53fae90344681f6"
-  integrity sha512-lLitIwJEnLsm2t41fJCR2JWGokrreM8zheSq14LvUGE48isXNDwvLtO/AFOELha+7Cj3LcVPbZKAlFWmasZrtQ==
-  dependencies:
-    csstype "^3.0.8"
-
 "@basis-theory/basis-theory-elements-interfaces@^3.2.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-3.3.0.tgz#62928ad51b727d0d7bb2a665fd8524c7b4192615"
@@ -1424,21 +1417,10 @@
   dependencies:
     csstype "^3.0.8"
 
-"@basis-theory/basis-theory-js@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.14.0.tgz#4e714965f1e58cdaf39c7b41cdffaddac3d2019e"
-  integrity sha512-ZYmbDMfYdrk/bPl2v3Sq8r3xSKIm2Bi1jW/9CPiD/BD66ZUj8g1XUa1ygp06KvuMWoTEhk7H5QNEMcQmAz4Iuw==
-  dependencies:
-    "@basis-theory/basis-theory-elements-interfaces" "^2.0.1"
-    axios "^0.21.2"
-    camelcase-keys "^6.2.2"
-    snake-case "^3.0.4"
-    snakecase-keys "^3.2.1"
-
-"@basis-theory/basis-theory-js@^1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.20.0.tgz#2c8e89840c8f4b35403189f1430ccea1ffe0d539"
-  integrity sha512-aAOwEBK4rS/FP+Q8K5ra7mx2M2ENRcL1cismkFO//JXpx+alXrjIBAqYTiklir9GkK+dS+IyPbe7fZ2tQx+JYA==
+"@basis-theory/basis-theory-js@^1.20.0", "@basis-theory/basis-theory-js@^1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.21.0.tgz#3d4f2ae0476e8dd885ab5638ac9dcc4b708b551e"
+  integrity sha512-WU6FsExa4ueblqHcNn+kwgcKKIsJbXBVx7APD1/d2+kZ2s91e9DwVsqXweCbm2IsAm/tqFr83bpyinnjzHujSw==
   dependencies:
     "@basis-theory/basis-theory-elements-interfaces" "^3.2.0"
     axios "^0.21.2"
