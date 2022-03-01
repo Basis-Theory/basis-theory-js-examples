@@ -10,7 +10,7 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
-    "@basis-theory/basis-theory-js": "^1.14.0",
+    "@basis-theory/basis-theory-js": "^1.22.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
   }
