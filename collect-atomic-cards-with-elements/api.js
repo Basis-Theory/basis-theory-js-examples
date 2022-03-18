@@ -15,8 +15,10 @@ const router = express.Router();
 bt.init(SERVER_KEY);
 
 const executeStripeReactor = async (tokenId) => {
-  const reactionToken = await bt.atomicCards.react(tokenId, {
-    reactorId: REACTOR_ID,
+  const reactionToken = await bt.reactors.react(REACTOR_ID, {
+    args: {
+      card: `{{${tokenId}}}`
+    }
   });
 
   return reactionToken.raw.id;

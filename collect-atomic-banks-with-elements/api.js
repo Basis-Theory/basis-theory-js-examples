@@ -10,11 +10,11 @@ const router = express.Router();
 bt.init(SERVER_KEY);
 
 const executeSpreedlyReactor = async ({ bankTokenId, name }) => {
-  const reactionToken = await bt.atomicBanks.react(bankTokenId, {
-    reactorId: REACTOR_ID,
-    requestParameters: {
-      ACCOUNT_OWNER_FULL_NAME: name,
-    },
+  const reactionToken = await bt.reactors.react(REACTOR_ID, {
+    args: {
+      account_owner_full_name: name,
+      bank: `{{${bankTokenId}}}`
+    }
   });
 
   return reactionToken.raw;
