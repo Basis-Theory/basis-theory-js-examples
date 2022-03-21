@@ -1424,6 +1424,13 @@
   dependencies:
     csstype "^3.0.8"
 
+"@basis-theory/basis-theory-elements-interfaces@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-3.5.0.tgz#3fee57a36676896280858e77abbeda7574a9393e"
+  integrity sha512-ejufLjeDHxH0WZZNV2rHT0ioSMfZfKjoiOIOCDEngq5kPIk2Xxpodg+usiKLvC2h/KzoJbGnc40f8mPxrMckQg==
+  dependencies:
+    csstype "^3.0.8"
+
 "@basis-theory/basis-theory-js@^1.14.0":
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.14.0.tgz#4e714965f1e58cdaf39c7b41cdffaddac3d2019e"
@@ -1443,6 +1450,19 @@
     "@basis-theory/basis-theory-elements-interfaces" "^3.2.0"
     axios "^0.21.2"
     camelcase-keys "^6.2.2"
+    snake-case "^3.0.4"
+    snakecase-keys "^3.2.1"
+
+"@basis-theory/basis-theory-js@^1.23.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.23.0.tgz#363ccab4f13ff9843cb445cf4306d7d0ce58df90"
+  integrity sha512-cZUIsnPnZGtbEWKEw/NFbudE7hq7G+H4ltPqUFWF8/Hp74ye8WKHT7tg8/ZWZfCGJNCGmsWxz75H4hXnaw3RVw==
+  dependencies:
+    "@basis-theory/basis-theory-elements-interfaces" "^3.5.0"
+    axios "^0.21.2"
+    camelcase-keys "^6.2.2"
+    os "^0.1.2"
+    os-browserify "^0.3.0"
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
@@ -7890,6 +7910,16 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
+
+os-browserify@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
+  integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
+
+os@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/os/-/os-0.1.2.tgz#f29a50c62908516ba42652de42f7038600cadbc2"
+  integrity sha512-ZoXJkvAnljwvc56MbvhtKVWmSkzV712k42Is2mA0+0KTSRakq5XXuXpjZjgAt9ctzl51ojhQWakQQpmOvXWfjQ==
 
 ospath@^1.2.2:
   version "1.2.2"
