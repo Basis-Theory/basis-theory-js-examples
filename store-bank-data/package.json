@@ -1,7 +1,7 @@
 {
-  "name": "store-atomic-banks",
+  "name": "store-bank-data",
   "version": "1.0.0",
-  "description": "Example of how to securely store Atomic Banks",
+  "description": "Example of how to securely store Bank data",
   "main": "index.js",
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",

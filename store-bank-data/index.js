@@ -11,7 +11,7 @@ let basisTheory;
 app.use(express.json());
 
 app.get('/get_mask', (req, res) => {
-  res.send(account.bank);
+  res.send(account.data);
 });
 
 app.get('/get', async (req, res) => {
@@ -19,22 +19,23 @@ app.get('/get', async (req, res) => {
     return res.status(404).send();
   }
 
-  const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
+  const bankToken = await basisTheory.tokens.retrieve(account.id);
 
-  return res.send(atomicBank.bank);
+  return res.send(bankToken.data);
 });
 
 app.post('/create', async (req, res) => {
   const { accountNumber, routingNumber } = req.body;
 
-  const atomicBank = await basisTheory.atomicBanks.create({
-    bank: {
+  const bankTokenResponse = await basisTheory.tokens.create({
+    type: 'bank',
+    data: {
       routingNumber,
       accountNumber,
-    },
+    }
   });
 
-  account = atomicBank;
+  account = bankTokenResponse;
 
   res.send();
 });

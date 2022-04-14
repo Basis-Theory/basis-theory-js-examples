@@ -74,8 +74,9 @@ async function submitCard() {
   disableCard();
 
   try {
-    const token = await BasisTheory.atomicCards.create({
-      card,
+    const token = await BasisTheory.tokens.create({
+      type: 'card',
+      data: card
     });
 
     const response = await fetch(`/api/charge`, {

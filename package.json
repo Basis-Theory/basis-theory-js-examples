@@ -7,24 +7,24 @@
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
-    "collect-atomic-cards-with-elements",
-    "collect-atomic-banks-with-elements",
-    "store-atomic-banks",
-    "collect-atomic-cards-with-elements-react",
+    "collect-cards-with-elements",
+    "collect-banks-with-elements",
+    "store-bank-data",
+    "collect-cards-with-elements-react",
     "collect-pii-with-elements-react"
   ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
-    "start:collect-atomic-cards-with-elements": "yarn workspace collect-atomic-cards-with-elements start",
-    "start:collect-atomic-cards-with-elements-react": "yarn workspace collect-atomic-cards-with-elements-react start",
-    "start:collect-atomic-banks-with-elements": "yarn workspace collect-atomic-banks-with-elements start",
-    "start:store-atomic-banks": "yarn workspace store-atomic-banks start",
+    "start:collect-cards-with-elements": "yarn workspace collect-cards-with-elements start",
+    "start:collect-cards-with-elements-react": "yarn workspace collect-cards-with-elements-react start",
+    "start:collect-banks-with-elements": "yarn workspace collect-banks-with-elements start",
+    "start:store-bank-data": "yarn workspace store-bank-data start",
     "start:collect-pii-with-elements-react": "yarn workspace collect-pii-with-elements-react start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
-    "cypress:run:collect-atomic-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-cards-with-elements/**/*\"",
-    "cypress:run:collect-atomic-banks-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-atomic-banks-with-elements/**/*\"",
-    "cypress:run:store-atomic-banks": "yarn cypress:run --spec \"cypress/integration/store-atomic-banks/**/*\""
+    "cypress:run:collect-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-cards-with-elements/**/*\"",
+    "cypress:run:collect-banks-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-banks-with-elements/**/*\"",
+    "cypress:run:store-bank-data": "yarn cypress:run --spec \"cypress/integration/store-bank-data/**/*\""
   },
   "devDependencies": {
     "@basis-theory/eslint-config": "^1.0.8",

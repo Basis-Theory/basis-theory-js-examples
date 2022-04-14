@@ -38,7 +38,7 @@ context('bank tokenization', () => {
   });
 
   it(`should tokenize/fund bank`, () => {
-    cy.intercept('POST', 'https://api.basistheory.com/atomic/banks').as(
+    cy.intercept('POST', 'https://api.basistheory.com/tokens').as(
       'tokenize'
     );
     cy.intercept('POST', '/api/fund').as('fund');

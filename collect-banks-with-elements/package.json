@@ -1,7 +1,7 @@
 {
-  "name": "collect-atomic-cards-with-elements",
+  "name": "collect-banks-with-elements",
   "version": "1.0.0",
-  "description": "Example of how to collect Atomic Cards with Basis Theory Elements",
+  "description": "Example of how to collect Bank data with Basis Theory Elements",
   "main": "index.js",
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",

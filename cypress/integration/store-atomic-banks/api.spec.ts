@@ -1,4 +1,4 @@
-context('store atomic banks API', () => {
+context('store banks API', () => {
   it('should start empty', () => {
     cy.request({
       url: 'get',
