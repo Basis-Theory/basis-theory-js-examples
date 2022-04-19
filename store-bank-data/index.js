@@ -10,34 +10,50 @@ let basisTheory;
 
 app.use(express.json());
 
-app.get('/get_mask', (req, res) => {
-  res.send(account.data);
+app.get("/", (req, res) => {
+  res.send(`<h2>Store bank data API example</h2>
+    <p>The API exposes /create, /get and /get_mask endpoints. Below are the curl commands to call them.</p> 
+    <h3>Create bank token</h3>
+    <code>curl --location --request POST 'http://localhost:3000/create' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "routingNumber": "021000021",
+        "accountNumber": "1234567891099"
+    }'</code>
+    <h3>Get raw bank data</h3>
+    <code>curl --location --request GET 'http://localhost:3000/get'</code>
+    <h3>Get masked bank data</h3>
+    <code>curl --location --request GET 'http://localhost:3000/get_mask'</code>
+  `);
 });
 
-app.get('/get', async (req, res) => {
+app.get("/get_mask", (req, res) => {
+  res.send(JSON.stringify(account.bank) + "\n");
+});
+
+app.get("/get", async (req, res) => {
   if (!account) {
     return res.status(404).send();
   }
 
-  const bankToken = await basisTheory.tokens.retrieve(account.id);
+  const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
 
-  return res.send(bankToken.data);
+  return res.send(JSON.stringify(atomicBank.bank) + "\n");
 });
 
-app.post('/create', async (req, res) => {
+app.post("/create", async (req, res) => {
   const { accountNumber, routingNumber } = req.body;
 
-  const bankTokenResponse = await basisTheory.tokens.create({
-    type: 'bank',
-    data: {
+  const atomicBank = await basisTheory.atomicBanks.create({
+    bank: {
       routingNumber,
-      accountNumber,
+      accountNumber
     }
   });
 
-  account = bankTokenResponse;
+  account = atomicBank;
 
-  res.send();
+  res.send("Bank token created \n");
 });
 
 app.listen(port, async () => {
