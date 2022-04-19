@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/get_mask", (req, res) => {
-  res.send(JSON.stringify(account.bank) + "\n");
+  res.send(JSON.stringify(account.data) + "\n");
 });
 
 app.get("/get", async (req, res) => {
@@ -36,22 +36,23 @@ app.get("/get", async (req, res) => {
     return res.status(404).send();
   }
 
-  const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
+  const bankToken = await basisTheory.tokens.retrieve(account.id);
 
-  return res.send(JSON.stringify(atomicBank.bank) + "\n");
+  return res.send(JSON.stringify(bankToken.data) + "\n");
 });
 
 app.post("/create", async (req, res) => {
   const { accountNumber, routingNumber } = req.body;
 
-  const atomicBank = await basisTheory.atomicBanks.create({
-    bank: {
+  const bankToken = await basisTheory.tokens.create({
+    type: 'bank',
+    data: {
       routingNumber,
       accountNumber
     }
   });
 
-  account = atomicBank;
+  account = bankToken;
 
   res.send("Bank token created \n");
 });
