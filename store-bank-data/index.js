@@ -47,8 +47,8 @@ app.post("/create", async (req, res) => {
   const bankToken = await basisTheory.tokens.create({
     type: 'bank',
     data: {
-      routingNumber,
-      accountNumber
+      routing_number: routingNumber,
+      account_number: accountNumber
     }
   });
 
@@ -58,7 +58,7 @@ app.post("/create", async (req, res) => {
 });
 
 app.listen(port, async () => {
-  basisTheory = await new BasisTheory().init('key_KiS9dUs6km3XEKo8ETWVSm');
+  basisTheory = await new BasisTheory().init('key_5LxCo1t8HH4KMfST7pWqzR');
 
   // eslint-disable-next-line no-console
   console.log(`Example app listening at http://localhost:${port}`);
