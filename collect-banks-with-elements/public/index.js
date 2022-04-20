@@ -121,10 +121,11 @@ async function submitBank() {
   disableBank();
 
   try {
-    const token = await BasisTheory.atomicBanks.create({
-      bank: {
-        routingNumber,
-        accountNumber,
+    const token = await BasisTheory.tokens.create({
+      type: 'bank',
+      data: {
+        routing_number: routingNumber,
+        account_number: accountNumber,
       },
     });
 

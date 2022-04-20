@@ -1,4 +1,4 @@
-context('store atomic banks API', () => {
+context('store banks API', () => {
   it('should start empty', () => {
     cy.request({
       url: 'get',
@@ -20,16 +20,14 @@ context('store atomic banks API', () => {
   it('should retrieve masked', () => {
     cy.request('get_mask').then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.have.property('routingNumber', '110000000');
-      expect(response.body).to.have.property('accountNumber', 'XXXXXXXX6789');
+      expect(response.body).to.contain('{"routing_number":"110000000","account_number":"XXXXXXXX6789"}\n');
     });
   });
 
   it('should retrieve', () => {
     cy.request('get').then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.have.property('routingNumber', '110000000');
-      expect(response.body).to.have.property('accountNumber', '000123456789');
+      expect(response.body).to.contain('{"routing_number":"110000000","account_number":"000123456789"}\n');
     });
   });
 });

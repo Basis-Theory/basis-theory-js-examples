@@ -14,8 +14,9 @@ export const CheckoutForm = (): JSX.Element => {
 
     if (bt) {
       try {
-        const response = await bt.atomicCards.create({
-          card: bt?.getElement('myCard'),
+        const response = await bt.tokens.create({
+          type: 'card',
+          data: bt?.getElement('myCard'),
         });
 
         setToken(JSON.stringify(response, undefined, 2));

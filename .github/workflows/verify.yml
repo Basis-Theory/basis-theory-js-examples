@@ -17,10 +17,10 @@ jobs:
     strategy:
       matrix:
         example:
-          - collect-atomic-cards-with-elements
-          - collect-atomic-cards-with-elements-react
-          - collect-atomic-banks-with-elements
-          - store-atomic-banks
+          - collect-cards-with-elements
+          - collect-cards-with-elements-react
+          - collect-banks-with-elements
+          - store-bank-data
           - collect-pii-with-elements-react
     env:
       HUSKY: 0 # disables husky hooks
