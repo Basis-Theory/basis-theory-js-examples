@@ -20,16 +20,14 @@ context('store banks API', () => {
   it('should retrieve masked', () => {
     cy.request('get_mask').then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.contain('110000000');
-      expect(response.body).to.contain('XXXXXXXX6789');
+      expect(response.body).to.contain('{"routing_number":"021000021","account_number":"XXXXXXXXX1099"}');
     });
   });
 
   it('should retrieve', () => {
     cy.request('get').then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.contain('110000000');
-      expect(response.body).to.contain('000123456789');
+      expect(response.body).to.contain('{"routing_number":"021000021","account_number":"1234567891099"}');
     });
   });
 });
