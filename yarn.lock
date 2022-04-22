@@ -1410,13 +1410,6 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@basis-theory/basis-theory-elements-interfaces@^3.2.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-3.3.0.tgz#62928ad51b727d0d7bb2a665fd8524c7b4192615"
-  integrity sha512-h/92hL5L+1Uoj/fkPZaxHDw17tsDqmIrBxHKzc0i54id5o1Ylmiv0K8bYWvpRpbpPnLfSFve6JdNGEcPsd1i4g==
-  dependencies:
-    csstype "^3.0.8"
-
 "@basis-theory/basis-theory-elements-interfaces@^3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-3.8.0.tgz#b7a5edca009e7deed5a05e9169452a75544f60de"
@@ -1424,18 +1417,7 @@
   dependencies:
     csstype "^3.0.8"
 
-"@basis-theory/basis-theory-js@^1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.20.0.tgz#2c8e89840c8f4b35403189f1430ccea1ffe0d539"
-  integrity sha512-aAOwEBK4rS/FP+Q8K5ra7mx2M2ENRcL1cismkFO//JXpx+alXrjIBAqYTiklir9GkK+dS+IyPbe7fZ2tQx+JYA==
-  dependencies:
-    "@basis-theory/basis-theory-elements-interfaces" "^3.2.0"
-    axios "^0.21.2"
-    camelcase-keys "^6.2.2"
-    snake-case "^3.0.4"
-    snakecase-keys "^3.2.1"
-
-"@basis-theory/basis-theory-js@^1.25.0":
+"@basis-theory/basis-theory-js@1.25.1", "@basis-theory/basis-theory-js@^1.25.0":
   version "1.25.1"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.25.1.tgz#21199829167998e1520e57760c99610b53d26b75"
   integrity sha512-eLsKg342u6+wQeX/hYuThndnQ7bIaOCclUqbOEem0CLiThB40gv86vTI1wnx2ciN1ilJNhoSp1QvITyT8nq82Q==
@@ -1448,12 +1430,12 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-react@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.0.2.tgz#04074d488b36a6ef5a5a77a313e4bbd2885b37a3"
-  integrity sha512-Yfv74rYNiH6MWYALWAQ1Q2GuAf95GaMzl+g6rxcUTe82yXJieMWdXiac5ZIXY91blN9wBmFyf9cq0dlnBPWP6g==
+"@basis-theory/basis-theory-react@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.0.5.tgz#6344035972579b9359d43191e6b70e8bfb439339"
+  integrity sha512-VWi+9s/VMKRW+7JnwTvpNDtZzTSLkniy9bHqxLr8uo9P3Yo4jTa4VtE3wclAJNS62lU13J63k2HcFRBXWcObGQ==
   dependencies:
-    "@basis-theory/basis-theory-js" "^1.20.0"
+    "@basis-theory/basis-theory-js" "1.25.1"
 
 "@basis-theory/eslint-config@^1.0.8":
   version "1.0.8"
