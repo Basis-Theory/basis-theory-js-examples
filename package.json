@@ -11,7 +11,9 @@
     "collect-banks-with-elements",
     "store-bank-data",
     "collect-cards-with-elements-react",
-    "collect-pii-with-elements-react"
+    "collect-pii-with-elements-react",
+    "collect-cards-with-split-elements",
+    "collect-cards-with-split-elements-react"
   ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
@@ -20,6 +22,8 @@
     "start:collect-banks-with-elements": "yarn workspace collect-banks-with-elements start",
     "start:store-bank-data": "yarn workspace store-bank-data start",
     "start:collect-pii-with-elements-react": "yarn workspace collect-pii-with-elements-react start",
+    "start:collect-cards-with-split-elements": "yarn workspace collect-cards-with-split-elements start",
+    "start:collect-cards-with-split-elements-react": "yarn workspace collect-cards-with-split-elements-react start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
     "cypress:run:collect-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-cards-with-elements/**/*\"",
@@ -27,7 +31,7 @@
     "cypress:run:store-bank-data": "yarn cypress:run --spec \"cypress/integration/store-bank-data/**/*\""
   },
   "devDependencies": {
-    "@basis-theory/eslint-config": "^1.0.8",
+    "@basis-theory/eslint-config": "^1.0.12",
     "@types/chance": "^1.1.3",
     "chance": "^1.1.8",
     "cypress": "^9.2.0",

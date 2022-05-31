@@ -1410,37 +1410,30 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@basis-theory/basis-theory-elements-interfaces@^3.8.0":
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-elements-interfaces/-/basis-theory-elements-interfaces-3.8.0.tgz#b7a5edca009e7deed5a05e9169452a75544f60de"
-  integrity sha512-9CBwOttK7kKRxddfToH5MLGFEAPRT21cL+cBg9A5y5yQJWbEplDfJcQ+v//uSVxhFAsrPY1CrqNsT5bcgsfnDg==
+"@basis-theory/basis-theory-js@^1.31.0", "@basis-theory/basis-theory-js@^1.32.1":
+  version "1.32.1"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.32.1.tgz#e3ed648a55295e82c9148476a62f28758d5a8e92"
+  integrity sha512-BcGUYD4IF5hFWGdSHQJYCSxkVHy4vAuZ9y+1rOEuWI4M2OCfJ7tTqQj+tBtxBVn7sHcTpDd7cj0nCja7AuBRbQ==
   dependencies:
-    csstype "^3.0.8"
-
-"@basis-theory/basis-theory-js@1.25.1", "@basis-theory/basis-theory-js@^1.25.0":
-  version "1.25.1"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.25.1.tgz#21199829167998e1520e57760c99610b53d26b75"
-  integrity sha512-eLsKg342u6+wQeX/hYuThndnQ7bIaOCclUqbOEem0CLiThB40gv86vTI1wnx2ciN1ilJNhoSp1QvITyT8nq82Q==
-  dependencies:
-    "@basis-theory/basis-theory-elements-interfaces" "^3.8.0"
     axios "^0.21.2"
     camelcase-keys "^6.2.2"
+    csstype "^3.0.11"
     os "^0.1.2"
     os-browserify "^0.3.0"
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-react@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.0.5.tgz#6344035972579b9359d43191e6b70e8bfb439339"
-  integrity sha512-VWi+9s/VMKRW+7JnwTvpNDtZzTSLkniy9bHqxLr8uo9P3Yo4jTa4VtE3wclAJNS62lU13J63k2HcFRBXWcObGQ==
+"@basis-theory/basis-theory-react@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.3.0.tgz#dc114b15f6e18c5999196fd127c5e5c4d3954a19"
+  integrity sha512-xzXxPRprVHAR8DpfCZPihpd0fkeGACDrEhwVP5qhr96n7ofaugQHun7sjd1WzS5SpOXn39dGX0b9hpC0QCeVDw==
   dependencies:
-    "@basis-theory/basis-theory-js" "1.25.1"
+    "@basis-theory/basis-theory-js" "^1.31.0"
 
-"@basis-theory/eslint-config@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@basis-theory/eslint-config/-/eslint-config-1.0.8.tgz#5e53936cc3b900a74e9c3c33f5fc85d571437a25"
-  integrity sha512-Qi7RVCbT/jUT1wIzcLt3tqBSVTEnFCJCbWqo41z1EFBm6HQFpDFexN509I5+7ttZlgGfn8LRxJBV8nKJRVG+NQ==
+"@basis-theory/eslint-config@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@basis-theory/eslint-config/-/eslint-config-1.0.12.tgz#0bc687a82a9382d43ce57d97b34f66fdb70f5ead"
+  integrity sha512-wJinPBhmdMcG719iMsIm6f3HNwb70Dd6fGYVk3X2KB19KKkPDU3lsLGRT4ntGCgX+N4M8F8CCNq6PC5vOAbtUA==
   dependencies:
     "@rushstack/eslint-patch" "^1.0.8"
     "@trivago/prettier-plugin-sort-imports" "^3.1.1"
@@ -1450,6 +1443,8 @@
     eslint-config-get-off-my-lawn "^6.0.1"
     eslint-config-next "^11.1.2"
     eslint-config-prettier "^8.3.0"
+    eslint-import-resolver-node "^0.3.6"
+    eslint-import-resolver-typescript "^2.7.1"
     eslint-plugin-prettier "^4.0.0"
     read-pkg-up "^7.0.1"
 
@@ -4082,7 +4077,12 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^3.0.2, csstype@^3.0.8:
+csstype@^3.0.11:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.0.tgz#4ddcac3718d787cf9df0d1b7d15033925c8f29f2"
+  integrity sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==
+
+csstype@^3.0.2:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
   integrity sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==
@@ -4180,6 +4180,13 @@ debug@^3.1.0, debug@^3.1.1, debug@^3.2.7:
   integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
   dependencies:
     ms "^2.1.1"
+
+debug@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+  dependencies:
+    ms "2.1.2"
 
 decimal.js@^10.2.1:
   version "10.3.1"
@@ -4762,6 +4769,17 @@ eslint-import-resolver-typescript@^2.4.0:
     is-glob "^4.0.1"
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
+
+eslint-import-resolver-typescript@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.7.1.tgz#a90a4a1c80da8d632df25994c4c5fdcdd02b8751"
+  integrity sha512-00UbgGwV8bSgUv34igBDbTOtKhqoRMy9bFjNehT40bXg6585PNIct8HhXZ0SybqB9rWtXj9crcku8ndDn/gIqQ==
+  dependencies:
+    debug "^4.3.4"
+    glob "^7.2.0"
+    is-glob "^4.0.3"
+    resolve "^1.22.0"
+    tsconfig-paths "^3.14.1"
 
 eslint-module-utils@^2.6.0, eslint-module-utils@^2.7.1:
   version "2.7.1"
@@ -5819,6 +5837,18 @@ glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+glob@^7.2.0:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
+  integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.1.1"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
 global-dirs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/global-dirs/-/global-dirs-3.0.0.tgz#70a76fe84ea315ab37b1f5576cbde7d48ef72686"
@@ -6331,6 +6361,13 @@ is-core-module@^2.2.0, is-core-module@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
   integrity sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==
+  dependencies:
+    has "^1.0.3"
+
+is-core-module@^2.8.1:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.9.0.tgz#e1c34429cd51c6dd9e09e0799e396e27b19a9c69"
+  integrity sha512-+5FPy5PnwmO3lvfMb0AsoPaBG+5KHUI0wYFXOtYPnVVVspTFUuMZNfNaNVRt3FZadstu2c8x23vykRW/NBoU6A==
   dependencies:
     has "^1.0.3"
 
@@ -7562,10 +7599,22 @@ minimatch@3.0.4, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@^3.1.1:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
+  integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
+  dependencies:
+    brace-expansion "^1.1.7"
+
 minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+
+minimist@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 mkdirp@^0.5.5, mkdirp@~0.5.1:
   version "0.5.5"
@@ -9275,6 +9324,15 @@ resolve@^1.14.2, resolve@^1.19.0, resolve@^1.21.0:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
+resolve@^1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
+  integrity sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==
+  dependencies:
+    is-core-module "^2.8.1"
+    path-parse "^1.0.7"
+    supports-preserve-symlinks-flag "^1.0.0"
+
 resolve@^2.0.0-next.3:
   version "2.0.0-next.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-2.0.0-next.3.tgz#d41016293d4a8586a39ca5d9b5f15cbea1f55e46"
@@ -10290,6 +10348,16 @@ tsconfig-paths@^3.11.0, tsconfig-paths@^3.12.0, tsconfig-paths@^3.9.0:
     "@types/json5" "^0.0.29"
     json5 "^1.0.1"
     minimist "^1.2.0"
+    strip-bom "^3.0.0"
+
+tsconfig-paths@^3.14.1:
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.14.1.tgz#ba0734599e8ea36c862798e920bcf163277b137a"
+  integrity sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==
+  dependencies:
+    "@types/json5" "^0.0.29"
+    json5 "^1.0.1"
+    minimist "^1.2.6"
     strip-bom "^3.0.0"
 
 tslib@^1.8.1:
