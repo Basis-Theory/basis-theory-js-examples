@@ -12,8 +12,8 @@
     "store-bank-data",
     "collect-cards-with-elements-react",
     "collect-pii-with-elements-react",
-    "collect-cards-with-split-elements",
-    "collect-cards-with-split-elements-react"
+    "collect-cards-with-individual-elements",
+    "collect-cards-with-individual-elements-react"
   ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
@@ -22,8 +22,8 @@
     "start:collect-banks-with-elements": "yarn workspace collect-banks-with-elements start",
     "start:store-bank-data": "yarn workspace store-bank-data start",
     "start:collect-pii-with-elements-react": "yarn workspace collect-pii-with-elements-react start",
-    "start:collect-cards-with-split-elements": "yarn workspace collect-cards-with-split-elements start",
-    "start:collect-cards-with-split-elements-react": "yarn workspace collect-cards-with-split-elements-react start",
+    "start:collect-cards-with-individual-elements": "yarn workspace collect-cards-with-individual-elements start",
+    "start:collect-cards-with-individual-elements-react": "yarn workspace collect-cards-with-individual-elements-react start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless -b chrome",
     "cypress:run:collect-cards-with-elements": "yarn cypress:run --spec \"cypress/integration/collect-cards-with-elements/**/*\"",

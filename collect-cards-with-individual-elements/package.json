@@ -1,7 +1,7 @@
 {
-  "name": "collect-cards-with-split-elements",
+  "name": "collect-cards-with-individual-elements",
   "version": "1.0.0",
-  "description": "Example of how to collect Card data with the split Basis Theory Card Elements",
+  "description": "Example of how to collect Card data with the individual Basis Theory Card Elements",
   "main": "index.js",
   "repository": "https://github.com/Basis-Theory/basis-theory-js-examples",
   "license": "Apache-2.0",
