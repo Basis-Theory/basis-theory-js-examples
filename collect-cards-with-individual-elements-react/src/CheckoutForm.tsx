@@ -27,9 +27,8 @@ export const CheckoutForm = (): JSX.Element => {
     setIsError(false);
 
     if (bt) {
-      const expirationDate = bt.getElement(
-        'cardExpirationDate'
-      ) as ICardExpirationDateElement; // for access to month/year methods type checking
+      const expirationDate =
+        bt.getElement<ICardExpirationDateElement>('cardExpirationDate'); // for access to month/year methods type checking
 
       try {
         const response = await bt.tokens.create({
