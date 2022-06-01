@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/get_mask", (req, res) => {
-  res.send(JSON.stringify(account.data) + "\n");
+  res.send(`${JSON.stringify(account.data)}\n`);
 });
 
 app.get("/get", async (req, res) => {
@@ -38,7 +38,7 @@ app.get("/get", async (req, res) => {
 
   const bankToken = await basisTheory.tokens.retrieve(account.id);
 
-  return res.send(JSON.stringify(bankToken.data) + "\n");
+  return res.send(`${JSON.stringify(bankToken.data)}\n`);
 });
 
 app.post("/create", async (req, res) => {

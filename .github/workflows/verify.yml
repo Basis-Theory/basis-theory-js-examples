@@ -22,6 +22,8 @@ jobs:
           - collect-banks-with-elements
           - store-bank-data
           - collect-pii-with-elements-react
+          - collect-cards-with-individual-elements
+          - collect-cards-with-individual-elements-react
     env:
       HUSKY: 0 # disables husky hooks
     steps:
