@@ -17,12 +17,12 @@ jobs:
     strategy:
       matrix:
         example:
-          - collect-cards-with-elements
+          - collect-cards-with-elements-js
           - collect-cards-with-elements-react
           - collect-banks-with-elements
           - store-bank-data
           - collect-pii-with-elements-react
-          - collect-cards-with-individual-elements
+          - collect-cards-with-individual-elements-js
           - collect-cards-with-individual-elements-react
     env:
       HUSKY: 0 # disables husky hooks

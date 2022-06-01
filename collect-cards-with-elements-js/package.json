@@ -1,5 +1,5 @@
 {
-  "name": "collect-cards-with-elements",
+  "name": "collect-cards-with-elements-js",
   "version": "1.0.0",
   "description": "Example of how to collect Card data with Basis Theory Elements",
   "main": "index.js",
