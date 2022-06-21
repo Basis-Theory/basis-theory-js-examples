@@ -63,7 +63,7 @@ export const CheckoutForm = (): JSX.Element => {
     base: {
       color: '#fff',
       fontWeight: 500,
-      fontFamily: "'Inter'",
+      fontFamily: '"Inter"',
       fontSize: '16px',
       fontSmooth: 'antialiased',
       '::placeholder': {
