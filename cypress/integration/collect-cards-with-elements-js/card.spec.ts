@@ -22,9 +22,7 @@ context('card tokenization', () => {
 
   [visa, amex].forEach(({ brand, cardNumber, cvc }) =>
     it(`should tokenize/charge ${brand} card`, () => {
-      cy.intercept('POST', 'https://api.basistheory.com/tokens').as(
-        'tokenize'
-      );
+      cy.intercept('POST', 'https://api.basistheory.com/tokens').as('tokenize');
       cy.intercept('POST', '/api/charge').as('charge');
 
       cy.get('iframe').iframe(() => {

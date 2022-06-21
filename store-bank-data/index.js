@@ -10,7 +10,7 @@ let basisTheory;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.send(`<h2>Store bank data API example</h2>
     <p>The API exposes /create, /get and /get_mask endpoints. Below are the curl commands to call them.</p> 
     <h3>Create bank token</h3>
@@ -27,11 +27,11 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.get("/get_mask", (req, res) => {
+app.get('/get_mask', (req, res) => {
   res.send(`${JSON.stringify(account.data)}\n`);
 });
 
-app.get("/get", async (req, res) => {
+app.get('/get', async (req, res) => {
   if (!account) {
     return res.status(404).send();
   }
@@ -41,20 +41,20 @@ app.get("/get", async (req, res) => {
   return res.send(`${JSON.stringify(bankToken.data)}\n`);
 });
 
-app.post("/create", async (req, res) => {
+app.post('/create', async (req, res) => {
   const { accountNumber, routingNumber } = req.body;
 
   const bankToken = await basisTheory.tokens.create({
     type: 'bank',
     data: {
       routing_number: routingNumber,
-      account_number: accountNumber
-    }
+      account_number: accountNumber,
+    },
   });
 
   account = bankToken;
 
-  res.send("Bank token created \n");
+  res.send('Bank token created \n');
 });
 
 app.listen(port, async () => {

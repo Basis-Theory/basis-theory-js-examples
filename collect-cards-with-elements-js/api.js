@@ -17,8 +17,8 @@ bt.init(SERVER_KEY);
 const executeStripeReactor = async (tokenId) => {
   const { raw } = await bt.reactors.react(REACTOR_ID, {
     args: {
-      card: `{{${tokenId}}}`
-    }
+      card: `{{${tokenId}}}`,
+    },
   });
 
   return raw.id;

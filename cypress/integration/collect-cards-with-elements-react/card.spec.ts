@@ -22,9 +22,7 @@ context('card tokenization', () => {
 
   [visa, amex].forEach(({ brand, cardNumber, cvc }) =>
     it(`should tokenize ${brand} card`, () => {
-      cy.intercept('POST', 'https://api.basistheory.com/tokens').as(
-        'tokenize'
-      );
+      cy.intercept('POST', 'https://api.basistheory.com/tokens').as('tokenize');
 
       cy.get('iframe').iframe(() => {
         // types everything, testing the "focus next input" feature

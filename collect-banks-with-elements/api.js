@@ -13,8 +13,8 @@ const executeSpreedlyReactor = async ({ bankTokenId, name }) => {
   const { raw } = await bt.reactors.react(REACTOR_ID, {
     args: {
       account_owner_full_name: name,
-      bank: `{{${bankTokenId}}}`
-    }
+      bank: `{{${bankTokenId}}}`,
+    },
   });
 
   return raw;

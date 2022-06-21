@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "lint": "eslint . --quiet --ignore-path .gitignore",
+    "lint:fix": "eslint . --fix --ignore-path .gitignore",
     "start:collect-cards-with-elements-js": "yarn workspace collect-cards-with-elements-js start",
     "start:collect-cards-with-elements-react": "yarn workspace collect-cards-with-elements-react start",
     "start:collect-banks-with-elements": "yarn workspace collect-banks-with-elements start",
