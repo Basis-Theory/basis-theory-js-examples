@@ -59,7 +59,7 @@ jobs:
           install-command: yarn --frozen-lockfile --silent
           start: yarn start:${{ matrix.example }}
           record: true
-          spec: cypress/integration/${{ matrix.example }}/**/*
+          spec: cypress/e2e/${{ matrix.example }}/**/*
 
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
