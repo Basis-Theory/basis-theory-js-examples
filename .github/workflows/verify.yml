@@ -56,6 +56,7 @@ jobs:
         with:
           browser: chrome
           headless: true
+          config-file: cypress.config.ts
           install-command: yarn --frozen-lockfile --silent
           start: yarn start:${{ matrix.example }}
           record: true
