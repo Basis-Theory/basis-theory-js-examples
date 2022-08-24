@@ -2256,20 +2256,15 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
-"@types/node@*", "@types/node@>=8.1.0":
-  version "16.11.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
-  integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==
+"@types/node@*", "@types/node@>=8.1.0", "@types/node@^18.7.4":
+  version "18.7.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.5.tgz#f1c1d4b7d8231c0278962347163656f9c36f3e83"
+  integrity sha512-NcKK6Ts+9LqdHJaW6HQmgr7dT/i3GOHG+pt6BiWv++5SnjtRd4NXeiuN2kA153SjhXPR/AhHIPHPbrsbpUVOww==
 
 "@types/node@^14.14.31":
   version "14.17.34"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.34.tgz#fe4b38b3f07617c0fa31ae923fca9249641038f0"
   integrity sha512-USUftMYpmuMzeWobskoPfzDi+vkpe0dvcOBRNOscFrGxVp4jomnRxWuVohgqBow2xyIPC0S3gjxV/5079jhmDg==
-
-"@types/node@^18.7.4":
-  version "18.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.5.tgz#f1c1d4b7d8231c0278962347163656f9c36f3e83"
-  integrity sha512-NcKK6Ts+9LqdHJaW6HQmgr7dT/i3GOHG+pt6BiWv++5SnjtRd4NXeiuN2kA153SjhXPR/AhHIPHPbrsbpUVOww==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -10066,10 +10061,10 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-stripe@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-10.2.0.tgz#46de352f599d395a4f072b9e73f918397ee3ac7b"
-  integrity sha512-y0tW31r8rk0cGAVN+lxZUU0yqcFq7y+Kmi0SKuNPxDVKRx1aCvU1xpnVR9mZv5wNQOKpsx5C14UpeenoYu8+7A==
+stripe@^10.4.0:
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-10.4.0.tgz#e852e7fa02bec485b4f331790d026f918ab1eeae"
+  integrity sha512-NsvaDltBy0yMLZwzW+c7geR/eFweijnbn+7sVZELEyr2Tk+KGOl6ETc6elci3+djumxtveXGQ/p3e8VOKg1+xw==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.10.3"
@@ -10245,9 +10240,9 @@ terser-webpack-plugin@^5.1.3, terser-webpack-plugin@^5.2.5:
     terser "^5.7.2"
 
 terser@^5.0.0, terser@^5.10.0, terser@^5.14.2, terser@^5.7.2:
-  version "5.14.2"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.14.2.tgz#9ac9f22b06994d736174f4091aa368db896f1c10"
-  integrity sha512-oL0rGeM/WFQCUd0y2QrWxYnq7tfSuKBiqTjRPWrRgB46WD/kiwHwF8T23z78H6Q6kGCuuHcPB+KULHRdxvVGQA==
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.0.tgz#e16967894eeba6e1091509ec83f0c60e179f2425"
+  integrity sha512-L1BJiXVmheAQQy+as0oF3Pwtlo4s3Wi1X2zNZ2NxOB4wx9bdS9Vk67XQENLFdLYGCK/Z2di53mTj/hBafR+dTA==
   dependencies:
     "@jridgewell/source-map" "^0.3.2"
     acorn "^8.5.0"
