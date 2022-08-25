@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TextElement, useBasisTheory } from '@basis-theory/basis-theory-react';
+import type { TextElement as ITextElement } from '@basis-theory/basis-theory-react/types';
 
 const inputStyle = {
   fonts: [
@@ -44,6 +45,8 @@ export const RegistrationForm = (): JSX.Element => {
   const [tokens, setTokens] = useState('');
   const [isError, setIsError] = useState(false);
   const { bt } = useBasisTheory();
+  const fullNameRef = React.useRef<ITextElement>(null);
+  const ssnRef = React.useRef<ITextElement>(null);
 
   const submit = async (): Promise<void> => {
     setIsBusy(true);
@@ -52,10 +55,10 @@ export const RegistrationForm = (): JSX.Element => {
     if (bt) {
       try {
         const response = await bt.tokenize({
-          fullName: bt.getElement('fullName'),
+          fullName: fullNameRef.current,
           ssn: {
             type: 'social_security_number',
-            data: bt.getElement('ssn'),
+            data: ssnRef.current,
           },
         });
 
@@ -85,6 +88,7 @@ export const RegistrationForm = (): JSX.Element => {
             placeholder="Jane Doe"
             aria-label="Full Name"
             disabled={isBusy}
+            ref={fullNameRef}
             style={inputStyle}
             onChange={({ empty }) => {
               setNameEmpty(empty);
@@ -99,6 +103,7 @@ export const RegistrationForm = (): JSX.Element => {
             aria-label="Social Security Number"
             mask={ssnMask}
             disabled={isBusy}
+            ref={ssnRef}
             style={inputStyle}
             onChange={({ complete }) => {
               setSsnComplete(complete);

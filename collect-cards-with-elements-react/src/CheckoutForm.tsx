@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { CardElement, useBasisTheory } from '@basis-theory/basis-theory-react';
+import type { CardElement as ICardElement } from '@basis-theory/basis-theory-react/types';
 
 export const CheckoutForm = (): JSX.Element => {
   const [cardComplete, setCardComplete] = useState(false);
@@ -7,6 +8,7 @@ export const CheckoutForm = (): JSX.Element => {
   const [token, setToken] = useState('');
   const [isError, setIsError] = useState(false);
   const { bt } = useBasisTheory();
+  const elementRef = useRef<ICardElement>(null);
 
   const submit = async (): Promise<void> => {
     setIsBusy(true);
@@ -16,7 +18,7 @@ export const CheckoutForm = (): JSX.Element => {
       try {
         const response = await bt.tokens.create({
           type: 'card',
-          data: bt?.getElement('myCard'),
+          data: elementRef.current,
         });
 
         setToken(JSON.stringify(response, undefined, 2));
@@ -42,6 +44,7 @@ export const CheckoutForm = (): JSX.Element => {
           <CardElement
             id="myCard"
             disabled={isBusy}
+            ref={elementRef}
             style={{
               fonts: [
                 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap',
