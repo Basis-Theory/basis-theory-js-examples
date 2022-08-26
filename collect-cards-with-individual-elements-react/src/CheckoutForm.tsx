@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type {
   ElementStyle,
+  CardNumberElement as ICardNumberElement,
   CardExpirationDateElement as ICardExpirationDateElement,
+  CardVerificationCodeElement as ICardVerificationCodeElement,
 } from '@basis-theory/basis-theory-js/types/elements';
 import {
   CardNumberElement,
@@ -21,23 +23,23 @@ export const CheckoutForm = (): JSX.Element => {
   const [token, setToken] = useState('');
   const [isError, setIsError] = useState(false);
   const { bt } = useBasisTheory();
+  const cardNumberRef = useRef<ICardNumberElement>(null);
+  const expirationDateRef = useRef<ICardExpirationDateElement>(null);
+  const cvcRef = useRef<ICardVerificationCodeElement>(null);
 
   const submit = async (): Promise<void> => {
     setIsBusy(true);
     setIsError(false);
 
     if (bt) {
-      const expirationDate =
-        bt.getElement<ICardExpirationDateElement>('cardExpirationDate'); // for access to month/year methods type checking
-
       try {
         const response = await bt.tokens.create({
           type: 'card',
           data: {
-            number: bt.getElement('cardNumber'),
-            expiration_month: expirationDate.month(),
-            expiration_year: expirationDate.year(),
-            cvc: bt.getElement('cardVerificationCode'),
+            number: cardNumberRef.current,
+            expiration_month: expirationDateRef.current?.month(),
+            expiration_year: expirationDateRef.current?.year(),
+            cvc: cvcRef.current,
           },
         });
 
@@ -91,6 +93,7 @@ export const CheckoutForm = (): JSX.Element => {
         <div className="row row-input">
           <CardNumberElement
             id="cardNumber"
+            ref={cardNumberRef}
             style={style}
             onChange={({ complete, cardBrand }) => {
               setBrand(cardBrand);
@@ -104,6 +107,7 @@ export const CheckoutForm = (): JSX.Element => {
         <div className="row row-input">
           <CardExpirationDateElement
             id="cardExpirationDate"
+            ref={expirationDateRef}
             style={style}
             onChange={({ complete }) => {
               setCardComplete({
@@ -116,6 +120,7 @@ export const CheckoutForm = (): JSX.Element => {
         <div className="row row-input">
           <CardVerificationCodeElement
             id="cardVerificationCode"
+            ref={cvcRef}
             style={style}
             cardBrand={brand}
             onChange={({ complete }) => {
