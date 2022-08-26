@@ -1423,10 +1423,10 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-js@^1.43.0":
-  version "1.48.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.48.0.tgz#23ee7412c0f061cb6db53c5ab1adb991ecc1a1c6"
-  integrity sha512-vef6Mc/Oyb5CIPLdjDUuoAFsWvPMbz1p77vO18lk76EA4zpGniQg2Q3JOUkbpMKcFIcmGzRAbMcRcV4B0m5uaw==
+"@basis-theory/basis-theory-js@^1.48.0":
+  version "1.49.0"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.49.0.tgz#8b5bc89fb06a78b68fd503d9b964416c2dfb85d1"
+  integrity sha512-zXIfRsDozhcQJeRoEiYVMzq2iiGWbftCz4/OxHsiuA/M6SLBT5TcnS1Kc6+avZy/mC6d257/liIwpccNivRllg==
   dependencies:
     axios "^0.21.2"
     camelcase-keys "^6.2.2"
@@ -1436,12 +1436,12 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-react@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.5.0.tgz#2bd164c0bded4206b530697d2cb279349e91547d"
-  integrity sha512-z3HIlGgcRfOfVpvCxjZ2KyftXuixsobaIo14Cl8bDhzQ9d1N7dA9KtP8Wx0wmJCfKuEsqeClcYj++4H2VrpYWQ==
+"@basis-theory/basis-theory-react@^1.5.1":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.5.2.tgz#527cbc3474c8eabb4a68f02cd2dad7b6b1977028"
+  integrity sha512-Fsr8mKWMSrmt4ltXeU6YyhycyYOP1HLnE9JSeH7Hz+XXuzh6nQefhwxI7Zeru3QP0HfE2lsGEeOd4llFiNHj3g==
   dependencies:
-    "@basis-theory/basis-theory-js" "^1.43.0"
+    "@basis-theory/basis-theory-js" "^1.48.0"
 
 "@basis-theory/eslint-config@^1.0.12":
   version "1.0.12"
