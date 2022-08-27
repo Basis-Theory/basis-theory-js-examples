@@ -1423,7 +1423,7 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-js@^1.48.0":
+"@basis-theory/basis-theory-js@^1.48.0", "@basis-theory/basis-theory-js@^1.49.0":
   version "1.49.0"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-js/-/basis-theory-js-1.49.0.tgz#8b5bc89fb06a78b68fd503d9b964416c2dfb85d1"
   integrity sha512-zXIfRsDozhcQJeRoEiYVMzq2iiGWbftCz4/OxHsiuA/M6SLBT5TcnS1Kc6+avZy/mC6d257/liIwpccNivRllg==
