@@ -10,7 +10,7 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "@basis-theory/basis-theory-js": "^1.48.0",
+    "@basis-theory/basis-theory-js": "^1.49.0",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "stripe": "^10.2.0"
