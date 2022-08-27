@@ -1436,7 +1436,7 @@
     snake-case "^3.0.4"
     snakecase-keys "^3.2.1"
 
-"@basis-theory/basis-theory-react@^1.5.1":
+"@basis-theory/basis-theory-react@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@basis-theory/basis-theory-react/-/basis-theory-react-1.5.2.tgz#527cbc3474c8eabb4a68f02cd2dad7b6b1977028"
   integrity sha512-Fsr8mKWMSrmt4ltXeU6YyhycyYOP1HLnE9JSeH7Hz+XXuzh6nQefhwxI7Zeru3QP0HfE2lsGEeOd4llFiNHj3g==
