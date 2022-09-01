@@ -5,4 +5,5 @@ This example shows how to securely collect card information with [Basis Theory R
 
 Alternatively, head over [here](https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-react) to check out how to do the same thing but using `CardNumberElement`, `CardExpirationDateElement` and `CardVerificationCodeElement`.
 
-See it live at [CodeSandbox](https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx).
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react?file=src/App.tsx,src/CheckoutForm.tsx)
